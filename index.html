@@ -1,0 +1,54 @@
+<html>
+
+	<head>
+		<!--<title>Snake</title>-->
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<div id="branch">
+			<div><span>Options</span></div>
+			<div><span>Snake</span></div>
+			<div><span>Score</span></div>
+		</div>
+
+		<div class="column intro">
+			<div id="difficulty">
+				<h3>Difficulty</h3>
+				<ul>
+					<li id="easy"><span>Easy</span></li>
+					<li id="medium"><span>Medium</span></li>
+					<li id="hard"><span>Hard</span></li>
+				</ul>
+			</div>
+
+			<div id="instructions">
+				<h3>Instructions</h3>
+				<p>Guide your hungry snake around the yard to seek out food and grow with each tasty morsel</p>
+                <p>But be careful not to bump into yourself or the boundaries of the yard!</p>
+                <p>Earn higher points the quicker you get to each meal.</p>
+                <p>Bon appetite!</p>
+                <button>Collapse</button>
+            </div>
+
+		</div>
+
+		<div class="column game">
+			<div id="container">
+                <div id="game_over">Game Over</div>
+            </div>
+		</div>
+
+		<div class="column score">
+<!--			<div id="foodValue"></div> -->
+			<div id="points"></div>
+
+		</div>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/logic1.js"></script>
+	</body>
+</html>

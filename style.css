@@ -1,0 +1,226 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Sigmar One', cursive;
+}
+
+:not(.pixel) {
+
+}
+
+body {
+	position: relative;
+}
+
+body::after {
+	content: "";
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	background: url('images/jungle.jpg');
+	opacity: 0.5;
+	z-index: -1;
+}
+
+h3 {
+	text-align: left;
+	color: #333;
+}
+
+p {
+	text-align: left;
+    font-family: sans-serif;
+    color: #333;
+}
+
+#branch {
+	height: 180px;
+	background: url('images/jungle.jpg');
+}
+
+#branch div {
+	display: inline-block;
+	position: relative;
+	height: 200px;
+	width: 350px;
+	text-align: center;
+	background: url('images/sign.png') no-repeat center center;
+	background-size: 100%;
+	margin-top: -50px;
+}
+
+#branch div:nth-of-type(2) {
+	height: 240px;
+	width: 500px;
+	margin-top: -200px;
+}
+
+#branch span {
+	position: absolute;
+	bottom: 0;
+	font: 30px/120px 'Sigmar One', cursive;
+	color: #191919;
+	transform: translateX(-50%);
+}
+
+#branch div:nth-of-type(2) span {
+	font: 80px/130px 'Sigmar One', cursive;
+	color: #0c0;
+}
+
+.column {
+	display: inline-block;
+	min-width: 350px;
+	vertical-align: top;
+}
+
+.intro > div {
+	border: 1px solid gray;
+	border-radius: 5px;
+	background: #ffa;
+	margin: 5px;
+	padding: 15px;
+
+}
+
+li {
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	border: 5px double gray;
+	border-radius: 100%;
+	margin: 15px 25px 0;
+    filter: grayscale(1);
+    opacity: 0.5;
+
+}
+
+li:hover  {
+    filter: grayscale(0);
+	opacity: 0.5;
+	cursor: pointer;
+	color: #333;
+}
+
+#difficulty .difficultySelected {
+	filter: grayscale(0);
+	opacity: 1;
+}
+
+#difficulty li span {
+	margin-left: -85px;
+}
+
+#difficulty  li:first-child {
+	background: #bdf url("images/easy_snake.png") no-repeat -100% -40%;
+	background-size: 110%;
+}
+
+#difficulty  li:nth-child(2) {
+	background: orange url("images/medium_snake.png") no-repeat -100% -50%;
+	background-size: 120%;
+
+}
+
+#difficulty  li:nth-child(3) {
+	background: red url("images/hard_snake.png") no-repeat 30% -10%;
+	background-size: 180%;
+}
+
+#instructions {
+    cursor: pointer;
+    background: #ffa url("images/menu_arrow.png") no-repeat 95% 15px;
+    background-size: 25px;
+}
+
+#instructions p,
+#instructions button{
+    display: none;
+    margin-top: 20px;
+}
+
+#container {
+    position: relative;
+	height: 480px;
+	width: 480px;
+	margin: auto;
+	background: #9f5;
+	border: 5px solid #333;
+}
+
+.pixel {
+	height: 12px;
+	width: 12px;
+	font-size:10px;
+	display: inline-block;
+	background: #9f5;
+	vertical-align: middle;
+    font-weight: bold;
+    color: brown;
+}
+
+.food {
+	background: red;
+	border-radius: 100%;
+}
+
+.snakeHead {
+	background: url('images/snake_head.png') no-repeat center center;
+	background-size: contain;
+}
+
+#game_over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: red;
+    color: white;
+    font-family: 'Sigmar One', cursive;
+    font-size: 50px;
+    line-height: 55px;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 50px;
+}
+
+.score {
+	position: relative;
+	height: 490px;
+}
+
+.score > * {
+	position: absolute;
+
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#points {
+	bottom: 0;
+    height: 250px;
+	width: 250px;
+	font: 50px/250px 'Sigmar One';
+	background: url('images/tree_rings.png') no-repeat 100% center;
+	background-size: contain;
+}
+
+.foodValue {
+	top: -320px;
+	height: 150px;
+	width: 150px;
+	font: 40px/200px 'Sigmar One';
+	background: url('images/apple.png') no-repeat center;
+	background-size: contain;
+}
+
+.eaten {
+	top: 0;
+	height: 120px;
+	width: 120px;
+	font: 40px/120px 'Sigmar One';
+	background: url('images/eaten_apple.png') no-repeat center;
+	background-size: contain;
+}
